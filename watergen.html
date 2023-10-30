@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn{
+       height:50px;
+       width:400px;
+       margin-left:200px;
+       border: 1px solid black;
+       border-radius: 40px;
+       background-color: rgb(67, 203, 67);
+    }
+    .btn1{
+       height:50px;
+       width:400px;
+       margin-left:300px;
+       border: 1px solid black;
+       border-radius: 40px;
+       background-color: red;
+    }
+    .h1{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        padding: 0px;
+        margin: 0px;
+        background-color: aquamarine;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .btn,.btn1{
+        margin-top: 40px;
+        font-size: 20px;
+
+    }
+    .btn1:hover{
+      background-color: aliceblue;
+      color:red;
+      font-style: italic;
+        
+    }
+    .btn:hover{
+       background-color: aliceblue;
+       color:green;
+      font-style: italic;
+        
+    }
+    .demo{
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        font-size: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .fill{
+        border:2px solid green;
+        height:50px;
+        width:900px;
+        /* display: flex; */
+        /* float: right; */
+        margin-left: 250px;
+        animation-name: anime;
+        animation-duration: 9s;
+       animation-iteration-count: 1;
+       
+        
+    }
+    body{
+        background:linear-gradient(#e66465,#9198e5);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 800px;
+    }
+    @keyframes anime{
+        0%{background-color: rgb(135, 210, 224);}
+        25%{background-color: rgb(62, 180, 220);}
+        50%{background-color: rgb(36, 118, 204);}
+        75%{background-color: rgba(0, 102, 255, 0.849);}
+        100%{background-color: blue;}
+    }
+
+</style>
+<body>
+    <div class="h1">
+    <h1>WATER GENERATOR</h1></div>
+    <button class="btn" onclick=onn()>Start The Generator</button>
+    <button class="btn1" onclick=stop()>Stop The Generator</button>
+    <p class="demo" id="demo"></p>
+    <div class="fill" id="fill"></div>
+    <script>
+        let fill=document.getElementById('fill');
+            fill.style.display="none";
+     function   onn(){
+              let fill=document.getElementById('fill');
+                fill.style.display="flex";
+             let demo= document.getElementById('demo');
+           demo.innerHTML="water is filling pliss wait";
+           globalThis.never= setTimeout(() =>{
+               let demo= document.getElementById('demo');
+               demo.innerHTML="water is filled pliss stop the generator";
+               
+               
+            },9000);
+        }
+        
+        
+        function stop(){
+                clearTimeout(never)
+                let demo= document.getElementById('demo');
+                
+                
+                demo.innerHTML="GENERATOR STOPPED SUCCESSFULLY";
+         
+                
+                fill.style.display="none"
+                
+            };
+            
+            
+  
+    </script>
+</body>
+</html>
