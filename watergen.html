@@ -91,6 +91,9 @@
     <button class="btn" onclick=onn()>Start The Generator</button>
     <button class="btn1" onclick=stop()>Stop The Generator</button>
     <p class="demo" id="demo"></p>
+    <audio src="./mixkit-bike-magical-bell-591.wav" id="trem" ></audio>
+    <audio src="./mixkit-bell-gentle-alarm-notification-940.wav" id="gen"></audio>
+    <audio src="./mixkit-alert-bells-echo-765.wav" id="step"></audio>
     <div class="fill" id="fill"></div>
     <script>
         let fill=document.getElementById('fill');
@@ -103,9 +106,14 @@
            globalThis.never= setTimeout(() =>{
                let demo= document.getElementById('demo');
                demo.innerHTML="water is filled pliss stop the generator";
+               let gen=document.getElementById('gen')
+               gen.play();
                
                
             },9000);
+            let trem= document.getElementById('trem');
+            trem.play();
+
         }
         
         
@@ -118,6 +126,9 @@
          
                 
                 fill.style.display="none"
+                let step=document.getElementById('step');
+                step.play()
+                gen.pause()
                 
             };
             
