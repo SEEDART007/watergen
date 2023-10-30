@@ -76,12 +76,17 @@
         background-size: cover;
         height: 800px;
     }
+   
     @keyframes anime{
-        0%{background-color: rgb(135, 210, 224);}
-        25%{background-color: rgb(62, 180, 220);}
-        50%{background-color: rgb(36, 118, 204);}
-        75%{background-color: rgba(0, 102, 255, 0.849);}
-        100%{background-color: blue;}
+        0%{background-color: rgb(135, 210, 224);width: 0%;}
+        25%{background-color: rgb(62, 180, 220);width:25%}
+        50%{background-color: rgb(36, 118, 204);width:50%}
+        75%{background-color: rgba(0, 102, 255, 0.849);width:65%}
+        100%{background-color: blue;width:75%}
+    }
+    .image{
+        height: 200px;
+        width:200px;
     }
 
 </style>
@@ -94,6 +99,7 @@
     <audio src="./mixkit-bike-magical-bell-591.wav" id="trem" ></audio>
     <audio src="./mixkit-bell-gentle-alarm-notification-940.wav" id="gen"></audio>
     <audio src="./mixkit-alert-bells-echo-765.wav" id="step"></audio>
+    
     <div class="fill" id="fill"></div>
     <script>
         let fill=document.getElementById('fill');
